@@ -15,5 +15,5 @@ jobs:
       - name: installing env
         run: pip install flask pytest
       - name: testing
-        working-directory: ./gamedev
+        # working-directory: ./gamedev
         run: pytest
