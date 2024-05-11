@@ -16,3 +16,8 @@ def test_games_page(app, client):
 	data_expectations = {'g1': 100, 'g2': 200, 'g3': 300, 'g4': 400}
 	# manual query <--> response data
 	assert data_expectations == json.loads(response.get_data())
+
+def test_not_existing_page(app, client):
+	response = client.get('/ljfhilughr4ehgregluikg')
+	assert response.status_code == 200
+
